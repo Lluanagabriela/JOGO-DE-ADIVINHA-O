@@ -1,15 +1,26 @@
-print ('**********************************')
-print ('Bem vindo, ao  JOGO DE ADIVINHAÇÃO')
-print ('**********************************')
+#jogoadivinhacao
+print('*********************************')
+print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
+print('*********************************')
 
-numeroSecreto = 16
+numeroSecreto = 22
 
-chute = input('digite um número')
+#Definindoo 0 número de tentativas
+numeroTentativas = 3
 
-print ('você digitou o número', chute)
+while (numeroTentativas > 0):
 
-if numeroSecreto == chute : 
-    print ('Você acertou!')
+    chuteString = input ('Digite um número ')
 
-else :
-    print('Você errou!')
+    print('Você digitou um número')
+
+    chute = int(chuteString)
+
+    if numeroSecreto == chute:  
+        print ('VOCÊ ACERTOU!')
+    elif(chute>numeroSecreto):
+        print('Você errou! O número secreto é menor!')
+    else:
+        print('Você errou! O número secreto é maior!')
+
+
