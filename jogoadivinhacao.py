@@ -1,26 +1,29 @@
-#jogoadivinhacao
 print('*********************************')
 print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
-numeroSecreto = 22
+#Definindo o número secreto
+numeroSecreto = 38
 
-#Definindoo 0 número de tentativas
+#Definindo o número de tentativas
 numeroTentativas = 3
+rodada = 1
 
-while (numeroTentativas > 0):
+while(rodada <= numeroTentativas):
+    print('Tentativa',rodada, 'de', numeroTentativas)
 
-    chuteString = input ('Digite um número ')
-
-    print('Você digitou um número')
-
+#Recebendo o chute do jogador
+    chuteString = input('Digite um número: ')
     chute = int(chuteString)
 
-    if numeroSecreto == chute:  
-        print ('VOCÊ ACERTOU!')
+#Declarando as condições
+    if (numeroSecreto == chute):
+        print('Você acertou!')
+        break
     elif(chute>numeroSecreto):
-        print('Você errou! O número secreto é menor!')
+        print('Você errou!! O número secreto é um número menor')
     else:
-        print('Você errou! O número secreto é maior!')
+        print('Você errou!! O número secreto é um número maior')
 
-
+    #numeroTentativas = numeroTentativas - 1 
+    rodada = rodada + 1 
