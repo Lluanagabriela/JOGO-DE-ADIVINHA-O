@@ -1,10 +1,25 @@
- 
 def jogar_forca():
 
-    print('**********************************')
+    print('*********************************')
     print('Bem vindo, ao JOGO FORCA')
-    print('**********************************')
+    print('*********************************')
+    #Definir qual a palavra secreta
+    palavraSecreta = "microsoft"
 
-    print ('Fim de jogo !')
+    enforcou = False
+    acertou = False
 
-    
+    #Enquanto o jogador não se "enforcar" E não acertar a palavra, faça algo
+    while(not enforcou and not acertou):
+        chute = input('Qual a letra?')
+        
+        for letra in palavraSecreta:
+            if(chute == letra):
+                print(letra)
+
+        print('Jogando...')
+
+
+    print("Fim de jogo!")
+if(__name__ == "__main__"):
+    jogar_forca()
