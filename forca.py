@@ -5,7 +5,11 @@ def jogar_forca():
     print('*********************************')
 
     #Definir qual a palavra secreta
-    palavraSecreta = "banana"
+    palavraSecreta = "microsoft"
+
+    letras_acertadas = ['_','_','_','_','_','_','_','_','_']
+
+    
 
     enforcou = False
     acertou = False
@@ -19,9 +23,10 @@ def jogar_forca():
         index = 0
         for letra in palavraSecreta:
             if(chute.upper() == letra.upper()):
-                print('Encontrei a letra {} na posição {}'.format(letra, index))
+                letras_acertadas[index] = letra 
             index = index + 1    
-       
+        
+        print(letras_acertadas)
 
 
     print("Fim de jogo!")
